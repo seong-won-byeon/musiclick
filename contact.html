@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뮤직클릭</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="assets/js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!--____header.html____-->
+    <header class="header">
+      <a href="#" class="link-back"><img src="assets/img/ico-back.svg" alt="뒤로가기"></a>
+    </header>
+    <!--____header.html____-->
+
+
+    <div class="p-20 contact">
+        <div class="contact-info">
+            <div>
+                <p>어떤 도움이 필요하신가요?</p>
+            </div>
+            <span>운영시간 : 평일 10:00 ~ 17:00 (점심 12:00 ~ 13:00)<br>
+                주말 및 공휴일은 휴무입니다.
+            </span>
+        </div>
+        <div class="contact-faq">
+            <p class="title">자주 하는 질문</p>
+            <ul class="accordion-list">
+                <li>
+                    <div class="ac-header">
+                        <p>질문을 작성해주세요.</p>
+                        <img src="assets/img/ico-dropdown.svg" alt="내용보기">
+                    </div>
+                    <div class="ac-cont">
+                        <p>
+                            A. lorm6
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ac-header">
+                        <p>질문을 작성해주세요.</p>
+                        <img src="assets/img/ico-dropdown.svg" alt="내용보기">
+                    </div>
+                    <div class="ac-cont">
+                        <p>
+                            A. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, asperiores!
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ac-header">
+                        <p>질문을 작성해주세요.</p>
+                        <img src="assets/img/ico-dropdown.svg" alt="내용보기">
+                    </div>
+                    <div class="ac-cont">
+                        <p>
+                            A. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa excepturi pariatur cupiditate. Hic ullam quaerat suscipit eum laudantium fugit tempore.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ac-header">
+                        <p>질문을 작성해주세요. 한 줄 말줄임입니다.질문을 작성해주세요. 한 줄 말줄임입니다.</p>
+                        <img src="assets/img/ico-dropdown.svg" alt="내용보기">
+                    </div>
+                    <div class="ac-cont">
+                        <p>
+                            A. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem sequi quisquam eos ipsum, facilis, incidunt reiciendis labore excepturi quaerat consectetur, assumenda veritatis ullam odit dolore iusto vero vel sapiente ducimus?
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ac-header">
+                        <p>질문을 작성해주세요.</p>
+                        <img src="assets/img/ico-dropdown.svg" alt="내용보기">
+                    </div>
+                    <div class="ac-cont">
+                        <p>
+                            A. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa excepturi pariatur cupiditate. Hic ullam quaerat suscipit eum laudantium fugit tempore.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="ac-header">
+                        <p>질문을 작성해주세요.</p>
+                        <img src="assets/img/ico-dropdown.svg" alt="내용보기">
+                    </div>
+                    <div class="ac-cont">
+                        <p>
+                            A. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem sequi quisquam eos ipsum, facilis, incidunt reiciendis labore excepturi quaerat consectetur, assumenda veritatis ullam odit dolore iusto vero vel sapiente ducimus?
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="btn-area">
+        <!--____button.html____-->
+        <button class="button btn-contact">1:1 문의하기</button>
+        <!--____button.html____-->
+    </div>
+
+    
+
+    <!-- 바텀시트 -->
+    <div class="dimmedarea" id="dimmed">
+        <div class="bottom-sheet" id="bottomSheet">
+            <div class="sheet-content">
+                <h3>1:1 문의</h3>
+                <form class="inquiry-form">
+                    <div class="form-group type">
+                        <!-- select.html -->
+                        <!-- <div class="select-wrapper">
+                            <label for="customSelect"><span>*</span>유형</label>
+                            <div class="custom-select" id="customSelect">
+                                <div class="custom-select-inner">
+                                    <span class="placeholder">문의 유형 선택</span>
+                                    <ul class="dropdown-list">
+                                        <li class="selected">미션 참여 문의</li>
+                                        <li>리워드 문의</li>
+                                        <li>오류 사항 문의</li>
+                                        <li>기타 문의</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <input type="hidden" name="inquiryType" id="inquiryType">
+                        </div> -->
+                  
+                        <!-- error -->
+                        <div class="select-wrapper error">
+                            <label for="customSelect"><span>*</span>유형</label>
+                            <div class="custom-select error" id="customSelect">
+                                <div class="custom-select-inner">
+                                    <span class="placeholder">문의 유형 선택</span>
+                                    <ul class="dropdown-list">
+                                        <li class="selected">미션 참여 문의</li>
+                                        <li>리워드 문의</li>
+                                        <li>오류 사항 문의</li>
+                                        <li>기타 문의</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <input type="hidden" name="inquiryType" id="inquiryType">
+                            <p class="error-msg">문의 유형을 선택해주세요.</p>
+                        </div>
+                        <!-- select.html -->
+                  
+                    </div>
+                    <div class="form-group cont">
+                        <!-- textarea.html -->
+                        <!-- 기본 상태 (default) -->
+                        <div class="textarea-wrapper">
+                            <label for="defaultTextarea"><span>*</span>문의 내용</label>
+                            <div class="custom-text" id="customText">
+                              <div class="textarea-inner">
+                                <textarea id="defaultTextarea" placeholder="문의 내용을 입력해주세요." maxlength="200"></textarea>
+                                <div class="char-count"><span id="charCount">0</span>/200</div>
+                              </div>
+                            </div>
+                        </div>
+                      
+                        <!-- error -->
+                        <!-- <div class="textarea-wrapper error">
+                            <label for="defaultTextarea"><span>*</span>문의 내용</label>
+                            <div class="textarea-box error">
+                              <textarea id="errorTextarea" maxlength="200">입력</textarea>
+                              <div class="char-count"><span id="charCount">0</span>/200</div>
+                            </div>
+                            <p class="error-msg">문의 내용을 입력해주세요.</p>
+                        </div> -->
+
+                        <!-- textarea.html -->
+                    </div>
+                    <div class="form-group email">
+                        <!-- input.html text -->
+                        <!-- 기본 상태 (default) -->
+                        <!-- <div class="input-wrapper">
+                            <label for="useremail"><span>*</span>이메일</label>
+                            <div class="custom-input" id="customInput">
+                              <div class="input-inner">
+                                <input
+                                  type="email"
+                                  id="useremail"
+                                  placeholder="답변받을 이메일을 입력하세요."
+                                  required
+                                />
+                              </div>
+                            </div>
+                        </div> -->
+                          
+                      
+                        <!-- error -->
+                        <div class="input-wrapper error">
+                            <label for="useremail"><span>*</span>이메일</label>
+                            <div class="custom-input" id="customInput">
+                              <div class="input-inner">
+                                <input
+                                  type="email"
+                                  id="useremail"
+                                  placeholder="답변받을 이메일을 입력하세요."
+                                  required
+                                />
+                              </div>
+                            </div>
+                            <p class="error-msg">답변을 받기 위해 이메일 주소를 입력해주세요.</p>
+                        </div>
+                        <!-- input.html text -->
+                    </div>
+                  
+                    <!-- 필수동의 -->
+                    <div class="form-group agree">
+                        <!-- input.html checkbox -->
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="agree" name="agreePrivacy" required>
+                            <label for="agree">
+                                <span class="ico-agree"></span>
+                                <span class="label-text">
+                                    <strong>(필수)</strong>&nbsp;문의 접수를 위한 정보 수집·이용 동의
+                                </span>
+                            </label>
+                        </div>
+                        <!-- input.html checkbox -->
+                    </div>
+                  
+                    <!-- 파일선택 -->
+                    <div class="form-group file">
+                        <!-- input.html file -->
+                        <div class="file-wrapper">
+                            <label for="fileUpload">이미지 첨부(선택)</label>
+                            <div class="file-box">
+                                <div class="file-info">
+                                    <div class="before-select" style="display: none;">
+                                        <p>최대 3개 업로드 가능</p>
+                                    </div>
+                                    <!-- 파일명 들어가는 곳 -->
+                                    <ul class="after-select">
+                                        <li>
+                                            <p>imageTitle.png</p>
+                                            <button class="btn-remove"></button>
+                                        </li>
+                                        <li>
+                                            <p>imageTitle.png</p>
+                                            <button class="btn-remove"></button>
+                                        </li>
+                                        <li>
+                                            <p>imageTitle.png</p>
+                                            <button class="btn-remove"></button>
+                                        </li>
+                                        <li>
+                                            <p>imageTitle.png</p>
+                                            <button class="btn-remove"></button>
+                                        </li>
+                                        <li>
+                                            <p>imageTitle.png</p>
+                                            <button class="btn-remove"></button>
+                                        </li>
+                                        <li>
+                                            <p>imageTitle.png</p>
+                                            <button class="btn-remove"></button>
+                                        </li>
+                                        <li>
+                                            <p>imageTitle.png</p>
+                                            <button class="btn-remove"></button>
+                                        </li>
+                                        <li>
+                                            <p>imageTitle.png</p>
+                                            <button class="btn-remove"></button>
+                                        </li>
+                                        <li>
+                                            <p>imageTitle.png</p>
+                                            <button class="btn-remove"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <label for="fileUpload" class="btn-file">파일 선택</label>
+                                <input type="file" id="fileUpload" class="file-input-hidden" multiple accept="image/*">
+                            </div>
+                        </div>
+                        <!-- input.html file -->
+                    </div>
+                  
+                    <div class="btn-box">
+                        <!--____button.html____-->
+                        <button class="button second" id="btnClose">닫기</button>
+                        <button type="submit" class="button primary">보내기</button>
+                        <!-- <button class="button disabled">보내기</button> -->
+                        <!--____button.html____-->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 문의 접수 팝업 -->
+    <!-- popup.html -->
+    <div class="popup-dimmed" style="display: none;">
+        <div class="popup">
+            <div class="popup-header">
+                <h3>문의가 접수됐어요!</h3>
+            </div>
+            <div class="popup-body">
+                <p>
+                    <span>영업일 기준 하루</span> 안에 이메일로 답변 드려요.<br>
+                    조금만 기다려주세요!
+                </p>
+                <img src="./assets/img/popup.png" alt="문의가 접수됐어요">
+            </div>
+            <div class="popup-btn">
+                <button class="button primary">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- popup.html -->
+
+
+
+    <!-- 중도이탈 팝업 -->
+    <!-- popup.html -->
+    <div class="popup-dimmed" style="display: none;">
+        <div class="popup type2">
+            <div class="popup-header">
+                <h3>작성 내용이 저장되지 않아요</h3>
+            </div>
+            <div class="popup-body">
+                <p>
+                    지금 나가면 작성한 내용이 사라져요.<br>
+                    계속 작성할까요?
+                </p>
+            </div>
+            <div class="popup-btn">
+                <!-- button.html -->
+                <button class="button second">나가기</button>
+                <button class="button primary">계속 작성</button>
+                <!-- button.html -->
+            </div>
+        </div>
+    </div>
+    <!-- popup.html -->
+
+
+
+</body>
+</html>

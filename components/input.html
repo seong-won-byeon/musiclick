@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+</head>
+<body>  
+    
+
+    <!-- 1. Input text -->
+    <!-- 기본 상태 (default) -->
+    <div class="input-wrapper">
+        <label for="useremail"><span>*</span>이메일</label>
+        <div class="custom-input" id="customInput">
+          <div class="input-inner">
+            <input
+              type="email"
+              id="useremail"
+              placeholder="답변받을 이메일을 입력하세요."
+              required
+            />
+          </div>
+        </div>
+    </div>
+
+    <!-- error -->
+    <div class="input-wrapper error">
+        <label for="useremail"><span>*</span>이메일</label>
+        <div class="custom-input" id="customInput">
+          <div class="input-inner">
+            <input
+              type="email"
+              id="useremail"
+              placeholder="답변받을 이메일을 입력하세요."
+              required
+            />
+          </div>
+        </div>
+        <p class="error-msg">답변을 받기 위해 이메일 주소를 입력해주세요.</p>
+    </div>
+      
+    
+
+    <!-- 2. Input checkbox -->
+    <div class="checkbox-wrapper">
+        <input type="checkbox" id="agree" name="agreePrivacy" required>
+        <label for="agree">
+            <span class="ico-agree"></span>
+            <span class="label-text">
+                <strong>(필수)</strong>문의 접수를 위한 정보 수집·이용 동의
+            </span>
+        </label>
+    </div>
+
+
+
+    <!-- 3. Input File -->
+    <div class="file-wrapper">
+      <label for="fileUpload">이미지 첨부(선택)</label>
+      <div class="file-box">
+          <div class="file-info">
+              <div class="before-select" style="display: none;">
+                  <p>최대 3개 업로드 가능</p>
+              </div>
+              <!-- 파일명 들어가는 곳 -->
+              <ul class="after-select">
+                  <li>
+                      <p>imageTitle.png</p>
+                      <button class="btn-remove"></button>
+                  </li>
+                  <li>
+                      <p>imageTitle.png</p>
+                      <button class="btn-remove"></button>
+                  </li>
+                  <li>
+                      <p>imageTitle.png</p>
+                      <button class="btn-remove"></button>
+                  </li>
+              </ul>
+          </div>
+          <label for="fileUpload" class="btn-file">파일 선택</label>
+          <input type="file" id="fileUpload" class="file-input-hidden" multiple accept="image/*">
+      </div>
+  </div>
+
+
+
+</body>
+</html>
