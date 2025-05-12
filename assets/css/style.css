@@ -249,7 +249,7 @@
   }
   #togglelyrics::after {
     content: '';
-    background: url(../img/ico-more.svg) no-repeat center / 100%;
+    background: url(../img/ico-dropdown.svg) no-repeat center / 100%;
     width: 12px;
     height: 12px;
   }
@@ -320,7 +320,7 @@
   }
   #toggleNotice::after {
     content: '';
-    background: url(../img/ico-more.svg) no-repeat center / 100%;
+    background: url(../img/ico-dropdown.svg) no-repeat center / 100%;
     width: 12px;
     height: 12px;
   }
@@ -502,6 +502,9 @@
     margin-top: 16px;
   }
 
+
+
+
   /* 필수동의 */
   .form-group.agree {
     margin-top: 8px;
@@ -545,6 +548,9 @@
   height: 40px;
 }
 .content h3 {
+  font-size: var(--font-h3-size);
+  font-weight: var(--font-h3-weight);
+  line-height: var(--font-h3-height);
   margin: 8px 0;
   color: #429993;
 }
@@ -707,6 +713,20 @@
 
 
 
+/* 미션대기중 팝업 */
+.waiting .checkbox-wrapper {
+  margin-top: 8px;
+  justify-content: center;
+}
+.waiting .checkbox-wrapper .label-text {
+  color: #485061;
+}
+.waiting .checkbox-wrapper .ico-agree {
+  width: 20px;
+  height: 20px;
+}
+
+
 
 
 /* 태블릿 : 543px ~ */
@@ -792,6 +812,9 @@
 
 
   /* 고객센터페이지 */
+  .p-20.contact {
+    padding-bottom: 160px;
+  }
   .container {
     margin-top: 56px;
     padding: 36px 24px 122px;
@@ -841,6 +864,13 @@
   }
 
 
+}
 
 
+
+@media screen and (max-height: 793px) and (min-width: 390px) and (max-width: 390px) {
+  .form-top {
+    height: 420px;
+    overflow-y: scroll;
+  }
 }
