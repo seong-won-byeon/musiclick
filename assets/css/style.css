@@ -503,6 +503,10 @@
   .form-top .form-group + .form-group:not(.agree) {
     margin-top: 16px;
   }
+  .form-top {
+    height: 420px;
+    overflow-y: scroll;
+  }
 
 
 
@@ -869,19 +873,3 @@
 }
 
 
-
-/* @media screen and (max-height: 793px) and (min-width: 390px) and (max-width: 390px) {
-  .form-top {
-    height: 420px;
-    overflow-y: scroll;
-  }
-} */
-
-
-
-@media screen and (max-width: 390px) and (max-height: 800px) {
-  .form-top {
-    height: 420px;
-    overflow-y: scroll;
-  }
-}
