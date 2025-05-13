@@ -1,24 +1,26 @@
 
 // 메인 배너슬라이드
-const swiper = new Swiper('.banner', {
-  direction: 'horizontal',
-  loop: false,
-  slidesPerView: 'auto',
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    // 320~542px → spaceBetween: 12
-    0: {
-      spaceBetween: 12,
+const bannerEl = document.querySelector('.banner');
+if (bannerEl) {
+  const swiper = new Swiper('.banner', {
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
-    // 543px 이상 → spaceBetween: 16
-    543: {
-      spaceBetween: 16,
+    breakpoints: {
+      0: {
+        spaceBetween: 12,
+      },
+      543: {
+        spaceBetween: 16,
+      },
     },
-  },
-});
+  });
+}
+
 
 
 
@@ -204,18 +206,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // textarea
   const customText = document.getElementById("customText");
 
-  textarea.addEventListener("focus", () => {
-    customText.classList.add("focus");
-  });
+  // textarea.addEventListener("focus", () => {
+  //   customText.classList.add("focus");
+  // });
+  // textarea.addEventListener("blur", () => {
+  //   customText.classList.remove("focus");
+  // });
 
-  textarea.addEventListener("blur", () => {
-    customText.classList.remove("focus");
-  });
+  function handleFocus(el) {
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    bottomSheet.style.paddingBottom = "300px"; // 키보드 영역만큼 확보
+  }
+  function handleBlur() {
+    bottomSheet.style.paddingBottom = "0";
+  }
+
+  textarea.addEventListener("focus", () => handleFocus(textarea));
+  textarea.addEventListener("blur", () => handleBlur(textarea));
+
 
   textarea.addEventListener("input", () => {
     charCount.textContent = `${textarea.value.length}/200`;
   });
-  // 글자 수 세기
   textarea.addEventListener("input", () => {
     charCount.textContent = textarea.value.length;
   });
@@ -229,14 +241,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('useremail');
   const customInput = document.getElementById('customInput');
 
-  input.addEventListener('focus', () => {
-    customInput.classList.add('focus');
-  });
+  // input.addEventListener('focus', () => {
+  //   customInput.classList.add('focus');
+  // });
 
-  input.addEventListener('blur', () => {
-    customInput.classList.remove('focus');
-  });
+  // input.addEventListener('blur', () => {
+  //   customInput.classList.remove('focus');
+  // });
 
+  input.addEventListener("focus", () => handleFocus(input));
+  input.addEventListener("blur", () => handleBlur(input));
 
 
 
