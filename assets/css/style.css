@@ -895,7 +895,7 @@
 
 
 
-@media screen and (max-height: 655px) {
+@media screen and (max-height: 700px) {
   .form-top {
     height: 420px;
     overflow-y: scroll;
