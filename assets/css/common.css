@@ -1487,3 +1487,53 @@ input[type="checkbox"]:checked + label .ico-agree {
 
 
 }
+
+
+
+
+/* toastBar.html */
+.toastBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: fixed;
+  top: -28px; /* 시작은 화면 위 */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 0px 0px 24px rgba(97, 118, 202,0.15);
+  border-radius: 1000px;
+  padding: 12px;
+  z-index: 9999;
+  /* animation: slideDown 0.6s ease-out forwards; */
+  animation: slideDown 0.6s ease-out forwards, 
+  fadeOut 0.5s ease-in 1s forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    top: -28px;
+    opacity: 0;
+  }
+  100% {
+    top: 28px; 
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    top: 80px;
+  }
+}
+
+.toastBar p {
+  font-weight: var(--font-semibold);
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -0.56px;
+  color: #3A495E;
+}
+
+
