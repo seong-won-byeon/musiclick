@@ -1524,7 +1524,7 @@ input[type="checkbox"]:checked + label .ico-agree {
 @keyframes fadeOut {
   to {
     opacity: 0;
-    top: 80px;
+    top: 0;
   }
 }
 
