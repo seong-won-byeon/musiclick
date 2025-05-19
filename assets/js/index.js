@@ -8,6 +8,9 @@ const swiper = new Swiper('.banner', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  preventClicks: true, // 터치 중 우발 클릭 방지
+  preventClicksPropagation: false, // 클릭 이벤트 전달 허용
+  touchStartPreventDefault: false, // 클릭 동작 차단 방지
   breakpoints: {
     // 320~542px → spaceBetween: 12
     0: {
