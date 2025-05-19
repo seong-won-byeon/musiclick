@@ -8,8 +8,6 @@ const swiper = new Swiper('.banner', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  observer: true,
-  observeParents: true,
   breakpoints: {
     // 320~542px → spaceBetween: 12
     0: {
