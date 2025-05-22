@@ -405,7 +405,7 @@ body.fixed {
 /* tab.html */
 .tab-swiper {
   overflow: hidden;
-  padding: 20px;
+  padding: 20px !important;
 }
 .tab-swiper .swiper-slide {
   width: auto !important; 
