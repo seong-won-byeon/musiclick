@@ -25,6 +25,10 @@ $(".tab-swiper .tab-item button").click(function () {
   $(this).closest(".swiper-slide").addClass("active");
 
   tabSwiper.slideTo(index, 300);
+    // index가 2 이하일 경우 0으로 고정
+    var goIndex = index <= 3 ? 0 : index;
+
+    tabSwiper.slideTo(goIndex, 300);
 });
 
 
