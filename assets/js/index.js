@@ -1,34 +1,19 @@
-
-// 메인 탭 슬라이드
 const tabSwiper = new Swiper('.tab-swiper', {
-  direction: 'horizontal',
-  loop: false,
   slidesPerView: 'auto',
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
   spaceBetween: 8,
 });
 
 
-// 메인 탭 클릭시 좌측 이동
-$(".tab-swiper .tab-item button").click(function () {
-  var index = $(this).parent("div").index();
+$('.tab-swiper .tab-item a').click(function (e) {
+  e.preventDefault();
+  var index = $(this).parent('li').index();
+  var goIndex = (index <= 3) ? 0 :index;
+  // 탭에 .on 클래스 수동 적용
+  $('.tab-swiper .tab-item').removeClass('on');
+  $(this).parent().addClass('on');
 
-  // 기존 active 클래스 제거
-  $(".tab-swiper .swiper-slide").removeClass("active");
-  $(".tab-swiper .tab").attr("aria-selected", "false");
-
-  // 클릭된 탭에 active 클래스 추가
-  $(this).attr("aria-selected", "true");
-  $(this).closest(".swiper-slide").addClass("active");
-
-  tabSwiper.slideTo(index, 300);
-    // index가 2 이하일 경우 0으로 고정
-    var goIndex = index <= 3 ? 0 : index;
-
-    tabSwiper.slideTo(goIndex, 300);
+  // 슬라이드 이동
+  tabSwiper.slideTo(goIndex, 300);
 });
 
 
