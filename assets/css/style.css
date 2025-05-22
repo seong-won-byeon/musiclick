@@ -50,12 +50,13 @@
     height: 100%;
     object-fit: cover;
   }
-  .banner .info-area {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    z-index: 20;
-  }
+.banner .info-area {
+	position:absolute;
+	z-index:20;
+	bottom: 0;
+	left: 0;
+	padding:16px;
+}
   .banner .info-area p {
     color: #fff;
     margin-bottom: 3px;
