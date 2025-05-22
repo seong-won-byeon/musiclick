@@ -403,24 +403,12 @@ body.fixed {
 
 
 /* tab.html */
-.tabs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  overflow-x: auto;
+.tab-swiper {
+  overflow: hidden;
   padding: 20px;
-  list-style: none;
-  margin: 0;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE */
 }
-.tabs::-webkit-scrollbar {
-  display: none; /* Chrome */
-}
-.tab-item {
-  flex-shrink: 0;
-}
-.tab {
+.tab-swiper .swiper-slide {
+  width: auto !important; 
   padding: 8px 16px;
   border: 1px solid #DDE0E4;
   border-radius: 20px;
@@ -429,10 +417,8 @@ body.fixed {
   line-height: var(--font-h6-height);
   white-space: nowrap;
   color: #4C5868;
-  background: none;
-  cursor: pointer;
 }
-.tab.active {
+.tab-swiper .swiper-slide.active {
   background: #4D5967;
   color: #fff;
   border: none;
