@@ -407,21 +407,22 @@ body.fixed {
   overflow: hidden;
   padding: 20px !important;
 }
+
 .tab-swiper .swiper-slide {
   width: auto !important; 
   padding: 8px 16px;
   border: 1px solid #DDE0E4;
   border-radius: 20px;
-  font-size: var(--font-h6-size);
-  font-weight: var(--font-h6-weight);
-  line-height: var(--font-h6-height);
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: var(--font-medium);
   white-space: nowrap;
   color: #4C5868;
 }
-.tab-swiper .swiper-slide.active {
-  background: #4D5967;
-  color: #fff;
-  border: none;
+.tab-swiper .swiper-slide.tab-item.on {
+  background: #4D5967 !important;
+  color: #fff !important;
+  border: none !important;
 }
 
 
