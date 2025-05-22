@@ -1,4 +1,38 @@
 
+// 메인 탭 슬라이드
+const tabSwiper = new Swiper('.tab-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  spaceBetween: 8,
+});
+
+
+// 메인 탭 클릭시 좌측 이동
+$(".tab-swiper .tab-item button").click(function () {
+  var index = $(this).parent("div").index();
+
+  // 기존 active 클래스 제거
+  $(".tab-swiper .swiper-slide").removeClass("active");
+  $(".tab-swiper .tab").attr("aria-selected", "false");
+
+  // 클릭된 탭에 active 클래스 추가
+  $(this).attr("aria-selected", "true");
+  $(this).closest(".swiper-slide").addClass("active");
+
+  tabSwiper.slideTo(index, 300);
+});
+
+
+
+
+
+
+
 // 메인 배너슬라이드
 const swiper = new Swiper('.banner', {
   direction: 'horizontal',
