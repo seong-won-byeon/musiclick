@@ -16,8 +16,7 @@
 
   /* 배너 슬라이드 */
   .swiper.banner {
-    /* height: calc(100vw * 0.516);  */
-    /* 예: 360 기준 160px */
+    position: relative !important;  
     padding: 8px 25px 22px 20px;
     overflow: hidden; 
   }
@@ -70,18 +69,18 @@
     font-weight: var(--font-label-weight);
     line-height: var(--font-label-line);
   }
-  .swiper-pagination {
+  .banner .swiper-pagination {
     width: 100%;
     bottom: 0 !important;
   }
-  .swiper-pagination-bullet {
+   .banner .swiper-pagination-bullet {
     width: 6px !important;
     height: 6px !important;
   }
-  .swiper-pagination-bullet-active {
+  .banner .swiper-pagination-bullet-active {
     background: #56B6AF !important;
   }
-  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  .banner .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 4px !important;
   }
 
