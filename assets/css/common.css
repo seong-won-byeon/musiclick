@@ -616,6 +616,7 @@ body.fixed {
 }
 .slideCont .swiper {
   margin-top: 16px;
+  overflow: visible !important;
 }
 .slideCont .swiper .swiper-slide-prev {
   opacity: 0;
