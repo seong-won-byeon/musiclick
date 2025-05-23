@@ -48,6 +48,28 @@ const swiper = new Swiper('.banner', {
 
 
 
+// 살짝 먼저 들어볼까요
+const prevSwiper = new Swiper('.prev-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  pagination: {
+    el: '.prev .swiper-pagination',
+    clickable: true,
+  },
+});
+
+// 편하게 들어보세요
+const recommSwiper = new Swiper('.recomm-swiper', {
+  direction: 'horizontal',
+  loop: false,
+  pagination: {
+    el: '.recomm .swiper-pagination',
+    clickable: true,
+  },
+});
+
+
+
 
 
 
