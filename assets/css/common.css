@@ -515,10 +515,10 @@ body.fixed {
   margin-top: 28px;
 }
 .card-row .thumb-area {
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid #EEEFEF;
-  width: 28.33vw;
+  width: 60px;
   flex-shrink: 0;
 }
 .card-row .thumb-area img {
@@ -581,6 +581,106 @@ body.fixed {
   }
 }
 
+
+
+
+/* 신규영역 추가 */
+.slideCont {
+  padding-bottom: 22px;
+  position: relative;
+  width: 85.55vw !important;
+}
+.slideCont .card-row {
+  margin-top: 0;
+}
+.slideCont .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.slideCont .swiper-pagination {
+  width: 100%;
+  bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.slideCont .swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+}
+.slideCont .swiper-pagination-bullet-active {
+  background: #56B6AF !important;
+}
+.slideCont .swiper {
+  margin-top: 16px;
+}
+.slideCont .swiper .swiper-slide-prev {
+  opacity: 0;
+  transition: 0.3s;
+}
+.slideCont .swiper .swiper-slide-next {
+  margin-left: 20px;
+}
+.card-row.type2 .list a {
+  gap: 6px;
+}
+.card-row.type2 .thumb-area {
+  border-radius: 8px;
+  border: 1px solid #EBECF0;
+  flex-shrink: 0;
+}
+.card-row.type2 .thumb-area img {
+  width: 60px;
+}
+.card-row.type2 .info-area {
+  padding: 4px;
+}
+.card-row.type2 .info-area > div {
+  display: flex;
+  align-items: center;
+}
+.card-row.type2 .info-area .col-top {
+  gap: 4px;
+}
+.card-row.type2 .info-area .col-top .title {
+  padding: 2px 0;
+  font-size: 16px;
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  color: #1A1D23;
+}
+.card-row.type2 .info-area .col-top .badge {
+  flex-shrink: 0;
+}
+.card-row.type2 .info-area .col-bottom {
+  justify-content: space-between;
+  margin-top: 2px;
+  gap: 2px;
+}
+.card-row.type2 .info-area .col-bottom .artist {
+  padding-left: 4px;
+  font-size: 14px;
+  font-weight: var(--font-regular);
+  line-height: 1.4;
+  color: #6E7891;
+  margin-top: 0;
+}
+.card-row.type2 .info-area .badgeBox {
+  flex-shrink: 0;
+}
+.card-row.type2 .info-area .col-bottom .tag .value {
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+  line-height: 1.5;
+}
+.card-row.type2 .info-area .col-bottom .tag .circle {
+  width: 17px;
+  height: 17px;
+  font-size: 11px;
+}
 
 
 
