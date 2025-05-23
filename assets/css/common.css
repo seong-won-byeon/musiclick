@@ -668,7 +668,7 @@ body.fixed {
   color: #6E7891;
   margin-top: 0;
 }
-.card-row.type2 .info-area .badgeBox {
+.card-row.type2 .info-area .col-bottom .tag {
   flex-shrink: 0;
 }
 .card-row.type2 .info-area .col-bottom .tag .value {
