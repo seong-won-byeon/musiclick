@@ -628,6 +628,9 @@ body.fixed {
 .slideCont .swiper .swiper-slide-next {
   margin-left: 20px;
 }
+.card-row.type2 .list + .list {
+  margin-top: 12px;
+}
 .card-row.type2 .list a {
   gap: 6px;
 }
@@ -684,6 +687,9 @@ body.fixed {
   width: 17px;
   height: 17px;
   font-size: 11px;
+}
+.card-row.type3 .list + .list {
+  margin-top: 12px;
 }
 .card-row.type3 .thumb-area {
   border-radius: 8px;
