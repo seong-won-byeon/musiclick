@@ -454,6 +454,9 @@ body.fixed {
   font-weight: var(--font-medium-weight);
   line-height: var(--font-medium-line);
   color: #8B98A7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .card .thumb-area {
   position: relative;
@@ -630,8 +633,8 @@ body.fixed {
 }
 .card-row.type2 .thumb-area {
   border-radius: 8px;
-  border: 1px solid #EBECF0;
   flex-shrink: 0;
+  width: auto;
 }
 .card-row.type2 .thumb-area img {
   width: 60px;
@@ -682,6 +685,41 @@ body.fixed {
   height: 17px;
   font-size: 11px;
 }
+.card-row.type3 .thumb-area {
+  border-radius: 8px;
+  flex-shrink: 0;
+  width: auto;
+}
+.card-row.type3 .thumb-area img {
+  width: 60px;
+}
+.card-row.type3 .info-area {
+  padding: 4px;
+}
+.card-row.type3 .list a {
+  gap: 6px;
+}
+.card-row.type3 .info-area .col-top .title {
+  padding: 0;
+  font-size: 16px;
+  font-weight: var(--font-regular);
+  line-height: 1.5;
+  color: #1A1D23;
+}
+.card-row.type3 .info-area .col-bottom {
+  margin-top: 2px;
+}
+.card-row.type3 .info-area .col-bottom .artist {
+  padding-left: 4px;
+  font-size: 14px;
+  font-weight: var(--font-regular);
+  line-height: 1.4;
+  color: #6E7891;
+  margin-top: 0;
+}
+
+
+
 
 
 
