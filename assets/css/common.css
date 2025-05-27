@@ -1640,7 +1640,7 @@ input[type="checkbox"]:checked + label .ico-agree {
   z-index: 9999;
   /* animation: slideDown 0.6s ease-out forwards; */
   animation: slideDown 0.6s ease-out forwards, 
-  fadeOut 0.5s ease-in 1s forwards;
+  fadeOut 0.5s ease-in 2.5s forwards;
 }
 
 @keyframes slideDown {
