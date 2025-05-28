@@ -628,6 +628,10 @@ body.fixed {
 .slideCont .swiper .swiper-slide-next {
   margin-left: 20px;
 }
+.slideCont.hot .swiper-slide {
+  /* height: 469px; */
+  height: 130.27vw;
+}
 .card-row.type2 .list + .list {
   margin-top: 12px;
 }
