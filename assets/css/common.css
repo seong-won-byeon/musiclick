@@ -469,6 +469,9 @@ body.fixed {
   row-gap: 32px;
   column-gap: 12px;
 }
+.card-column .list {
+  min-width:0;
+}
 .card-column .list a {
   display: block;
 }
