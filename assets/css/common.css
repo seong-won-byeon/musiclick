@@ -621,7 +621,7 @@ body.fixed {
   margin: 0 !important;
 }
 .slideCont .swiper {
-  margin-top: 16px;
+  margin-top: 12px;
   overflow: visible !important;
 }
 .slideCont .swiper .swiper-slide-prev {
@@ -631,9 +631,11 @@ body.fixed {
 .slideCont .swiper .swiper-slide-next {
   margin-left: 20px;
 }
+ .slideCont.hot .card-column .card .info-area .artist {
+    margin-top: 0;
+}
 .slideCont.hot .swiper-slide {
-  /* height: 469px; */
-  height: 130.27vw;
+  height: auto;
 }
 .card-row.type2 .list + .list {
   margin-top: 12px;
