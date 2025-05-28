@@ -89,8 +89,8 @@
 
 
   /* hot pick 슬라이드 */
-  .slideCont.hot {
-    width: 78.8vw !important;
+ .slideCont.hot {
+    width: 78.88vw !important;
   }
   .slideCont.hot .swiper .swiper-slide-next {
     margin-left: 0;
@@ -99,6 +99,12 @@
     margin-top: 0;
     row-gap: 16px;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .slideCont.hot .card-column .thumb-area {
+    border-radius: 12px;
+  }
+  .slideCont.hot .card-column .info-area {
+    margin-top: 2px;
   }
   .slideCont.hot .card .info-area .artist {
     margin-top: 0;
