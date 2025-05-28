@@ -88,6 +88,25 @@
 
 
 
+  /* hot pick 슬라이드 */
+  .slideCont.hot {
+    width: 78.8vw !important;
+  }
+  .slideCont.hot .swiper .swiper-slide-next {
+    margin-left: 12px;
+  }
+  .slideCont.hot .card-column {
+    margin-top: 0;
+    row-gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .slideCont.hot .card .info-area .artist {
+    margin-top: 0;
+  }
+
+
+
 
   /* 오늘 하루 */
   .titleTxt {
