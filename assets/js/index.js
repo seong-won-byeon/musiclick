@@ -72,6 +72,21 @@ const recommSwiper = new Swiper('.recomm-swiper', {
 
 
 
+// 메인 hotpick 슬라이드
+const hotSwiper = new Swiper('.hot-swiper', {
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.hot .swiper-pagination',
+    clickable: true,
+  },
+});
+
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
