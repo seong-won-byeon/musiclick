@@ -72,7 +72,7 @@ const hotSwiper = new Swiper('.hot-swiper', {
   direction: 'horizontal',
   loop: true,
   loopAdditionalSlides: 1,
-  slidesPerView: 1,
+  slidesPerView: 1.5,
   spaceBetween : 12
 });
 
