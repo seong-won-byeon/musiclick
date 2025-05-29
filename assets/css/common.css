@@ -621,7 +621,6 @@ body.fixed {
   margin: 0 !important;
 }
 .slideCont .swiper {
-  margin-top: 12px;
   overflow: visible !important;
 }
 .slideCont .swiper .swiper-slide-prev {
