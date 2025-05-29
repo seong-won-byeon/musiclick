@@ -95,10 +95,11 @@
   .slideCont.hot .swiper .swiper-slide-next {
     margin-left: 0;
   }
-  .slideCont.hot .card-column {
-    margin-top: 0;
+.slideCont.hot .card-column {
     row-gap: 16px;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    flex-direction: column;
   }
   .slideCont.hot .card-column .thumb-area {
     border-radius: 12px;
