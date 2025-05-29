@@ -45,24 +45,26 @@ const swiper = new Swiper('.banner', {
 
 
 
-// 살짝 먼저 들어볼까요
-const prevSwiper = new Swiper('.prev-swiper', {
-  direction: 'horizontal',
-  loop: true,
-  slidesPerView: 1,
-  speed: 350,  // 350ms → 0.35초 동안 슬라이드 이동
-  loopAdditionalSlides: 1,
+const hotSwiper = new Swiper('.hot-swiper', {
+  initialSlide: 0,
+  slidesPerView: 2,
+  slidesPerGroup: 1,
+  spaceBetween: 12,
+  loop:true,
+  loopAdditionalSlides: 3,
 });
 
 
-// 편하게 들어보세요
-const recommSwiper = new Swiper('.recomm-swiper', {
-  direction: 'horizontal',
-  loop: false,
-  speed: 350,  // 350ms → 0.35초 동안 슬라이드 이동
-  loopAdditionalSlides: 1,
-  loop: true,
+
+// 살짝 먼저 들어볼까요
+const prevSwiper = new Swiper('.prev-swiper', {
+  initialSlide: 0,
   slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 20,
+  loop:true,
+  loopAdditionalSlides: 3,
+  speed: 350,
 });
 
 
