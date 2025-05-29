@@ -69,13 +69,9 @@ const recommSwiper = new Swiper('.recomm-swiper', {
 
 // 메인 hotpick 슬라이드
 const hotSwiper = new Swiper('.hot-swiper', {
-  direction: 'horizontal',
-  loop: true,
+  slidesPerView: 2.2,
+  loop:true,
   spaceBetween: 12,
-  loopedSlides: 5,            // 실제 슬라이드 개수
-  loopAdditionalSlides: 2,    // 복제 슬라이드 수
-  observer: true,             // 동적 DOM 변경 감지
-  observeParents: true,
 });
 
 
