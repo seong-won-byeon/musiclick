@@ -45,29 +45,25 @@ const swiper = new Swiper('.banner', {
 
 
 
-
-
-
 // 살짝 먼저 들어볼까요
 const prevSwiper = new Swiper('.prev-swiper', {
   direction: 'horizontal',
-  loop: false,
-  pagination: {
-    el: '.prev .swiper-pagination',
-    clickable: true,
-  },
+  loop: true,
+  slidesPerView: 1,
+  speed: 350,  // 350ms → 0.35초 동안 슬라이드 이동
+  loopAdditionalSlides: 1,
 });
+
 
 // 편하게 들어보세요
 const recommSwiper = new Swiper('.recomm-swiper', {
   direction: 'horizontal',
   loop: false,
-  pagination: {
-    el: '.recomm .swiper-pagination',
-    clickable: true,
-  },
+  speed: 350,  // 350ms → 0.35초 동안 슬라이드 이동
+  loopAdditionalSlides: 1,
+  loop: true,
+  slidesPerView: 1,
 });
-
 
 
 
