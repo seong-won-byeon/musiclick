@@ -71,8 +71,11 @@ const recommSwiper = new Swiper('.recomm-swiper', {
 const hotSwiper = new Swiper('.hot-swiper', {
   direction: 'horizontal',
   loop: true,
-  loopAdditionalSlides: 1,
-  spaceBetween : 12
+  spaceBetween: 12,
+  loopedSlides: 5,            // 실제 슬라이드 개수
+  loopAdditionalSlides: 2,    // 복제 슬라이드 수
+  observer: true,             // 동적 DOM 변경 감지
+  observeParents: true,
 });
 
 
