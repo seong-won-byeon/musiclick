@@ -69,11 +69,12 @@ const recommSwiper = new Swiper('.recomm-swiper', {
 
 // 메인 hotpick 슬라이드
 const hotSwiper = new Swiper('.hot-swiper', {
-  slidesPerView: 2.2,
+  slidesPerView: 2,
+  slidesPerGroup: 2,
   loop:true,
   spaceBetween: 12,
+  loopAdditionalSlides: 3,
 });
-
 
 
 
