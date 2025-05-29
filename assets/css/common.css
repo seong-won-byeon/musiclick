@@ -628,9 +628,9 @@ body.fixed {
   opacity: 0;
   transition: 0.3s;
 }
-.slideCont .swiper .swiper-slide-next {
+/* .slideCont .swiper .swiper-slide-next {
   margin-left: 20px;
-}
+} */
  .slideCont.hot .card-column .card .info-area .artist {
     margin-top: 0;
 }
