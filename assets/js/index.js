@@ -1,3 +1,4 @@
+// 메인 탭 슬라이드
 const tabSwiper = new Swiper('.tab-swiper', {
   slidesPerView: 'auto',
   spaceBetween: 8,
@@ -21,14 +22,13 @@ $('.tab-swiper .tab-item a').click(function (e) {
 
 
 
-
 // 메인 배너슬라이드
 const swiper = new Swiper('.banner', {
   direction: 'horizontal',
   loop: false,
   slidesPerView: 'auto',
   pagination: {
-    el: '.swiper-pagination',
+    el: '.banner .swiper-pagination',
     clickable: true,
   },
   breakpoints: {
@@ -45,6 +45,11 @@ const swiper = new Swiper('.banner', {
 
 
 
+
+
+
+
+// 메인 hotpick 슬라이드
 const hotSwiper = new Swiper('.hot-swiper', {
   initialSlide: 0,
   slidesPerView: 2,
@@ -64,20 +69,23 @@ const prevSwiper = new Swiper('.prev-swiper', {
   spaceBetween: 20,
   loop:true,
   loopAdditionalSlides: 3,
-  speed: 350,
+  speed: 350,  // 350ms → 0.35초 동안 슬라이드 이동
 });
 
 
 
-// 메인 hotpick 슬라이드
-const hotSwiper = new Swiper('.hot-swiper', {
+// 편하게 들어보세요
+const recommSwiper = new Swiper('.recomm-swiper', {
   initialSlide: 0,
-  slidesPerView: 2,
+  slidesPerView: 1,
   slidesPerGroup: 1,
+  spaceBetween: 20,
   loop:true,
-  spaceBetween: 12,
   loopAdditionalSlides: 3,
+  speed: 350,  // 350ms → 0.35초 동안 슬라이드 이동
 });
+
+
 
 
 
@@ -210,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
   // select box 드롭다운
   const customSelect = document.getElementById('customSelect');
   const dropdownList = customSelect.querySelector('.dropdown-list');
@@ -255,6 +264,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
+
+
   // textarea
   const customText = document.getElementById("customText");
 
@@ -279,6 +290,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+  
+
+
   // 이메일 input
   const input = document.getElementById('useremail');
   const customInput = document.getElementById('customInput');
@@ -300,9 +314,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
-
-
-
-
-
-
