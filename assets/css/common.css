@@ -557,7 +557,7 @@ body.fixed {
 
 /* 신규영역 추가 */
 .slideCont {
-  padding-bottom: 22px;
+  padding-bottom: 0;
   position: relative;
   width: 85.55vw !important;
 }
