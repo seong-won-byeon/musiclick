@@ -791,7 +791,7 @@ body.fixed {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 4px;
+  padding: 2px 4px;
 }
 
 
@@ -804,9 +804,9 @@ body.fixed {
   font-size: var(--font-label-size);
   line-height: var(--font-label-line);
   font-weight: var(--font-label-weight);
-  border-radius: 8px;
-  padding: 6px 8px;
-  height: 28px;
+  border-radius: 6px;
+  padding: 4px 8px;
+  height: 24px;
 }
 .ebadge-12 {
   background: #FFF7F5;
@@ -842,10 +842,9 @@ body.fixed {
 }
 .tag .value {
   color: #181F28;
-  font-size: var(--font-h4-size);
-  line-height: var(--font-h4-height);
-  letter-spacing: var(--font-h4-spacing);
-  font-weight: var(--font-h4-weight);
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: var(--font-semibold);
 }
 .tag .circle {
   color: #fff;
