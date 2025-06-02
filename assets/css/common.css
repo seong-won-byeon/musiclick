@@ -561,9 +561,9 @@ body.fixed {
   position: relative;
   width: 85.55vw !important;
 }
-.slideCont .swiper-slide {
+/* .slideCont .swiper-slide {
   height: 296px;
-}
+} */
 .slideCont.hot .swiper-slide {
   height: auto;
 }
