@@ -684,7 +684,6 @@ body.fixed {
   margin-top: 2px;
 }
 .card-row.type3 .info-area .col-bottom .artist {
-  padding-left: 4px;
   font-size: 14px;
   font-weight: var(--font-regular);
   line-height: 1.4;
