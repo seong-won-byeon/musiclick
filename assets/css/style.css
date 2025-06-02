@@ -106,6 +106,7 @@
   }
   .slideCont.hot .card-column .info-area {
     margin-top: 2px;
+    min-height: 123px;
   }
   .slideCont.hot .card .info-area .artist {
     margin-top: 0;
