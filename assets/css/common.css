@@ -652,8 +652,8 @@ body.fixed {
   line-height: 1.5;
 }
 .card-row.type2 .info-area .col-bottom .tag .circle {
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
   font-size: 11px;
 }
 .card-row.type3 .thumb-area {
@@ -837,7 +837,7 @@ body.fixed {
 .tag {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   flex-shrink: 0;
 }
 .tag .value {
@@ -848,15 +848,14 @@ body.fixed {
 }
 .tag .circle {
   color: #fff;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: var(--font-semibold);
-  line-height: 20px;
 }
 .tag.e-tag .circle {
   background: #56B6AF;
