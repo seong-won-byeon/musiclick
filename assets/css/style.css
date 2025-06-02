@@ -111,7 +111,17 @@
     margin-top: 0;
   }
 
-
+ .swiper-overflow {
+    margin-left: 20px;
+    overflow: hidden;
+  }
+  .slideCont.hot .swiper .swiper-slide-prev {
+    opacity: 1;
+    transition: none;
+  }
+  .txt-01 {
+    padding-left: 20px;
+  }
 
 
 
