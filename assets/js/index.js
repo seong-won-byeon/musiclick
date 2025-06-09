@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
  // 메인 탭메뉴 클릭시 스타일';
-  const tabButtons = document.querySelectorAll('.tab
+  const tabButtons = document.querySelectorAll('.tab');
   const loading = document.querySelector('.loading');
 
   tabButtons.forEach(button => {
