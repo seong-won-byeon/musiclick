@@ -106,15 +106,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 메인 탭메뉴 클릭시 스타일
   const tabButtons = document.querySelectorAll('.tab');
+  const loading = document.querySelector('.loading');
 
   tabButtons.forEach(button => {
     button.addEventListener('click', () => {
+      // 탭 상태 초기화
       tabButtons.forEach(btn => {
         btn.classList.remove('active');
         btn.setAttribute('aria-selected', 'false');
       });
+  
+      // 클릭된 탭 활성화
       button.classList.add('active');
       button.setAttribute('aria-selected', 'true');
+  
+      // 로딩 화면 보여주기 (opacity: 1)
+      loading.classList.add('fade-in');
+
+      // 0.5초 후 로딩 화면 감추기 (opacity: 0)
+      setTimeout(() => {
+        loading.classList.remove('fade-in');
+      }, 1500); // transition 시간과 맞춰야 함
     });
   });
 
