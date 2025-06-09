@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         loading.classList.remove('fade-in');
         document.body.classList.remove('hidden');
-      }, 1500); // transition 시간과 맞춰야 함
+      },800); // transition 시간과 맞춰야 함
     });
   });
 
