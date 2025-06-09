@@ -405,6 +405,9 @@ body.fixed {
 
 
 
+body.hidden {
+  overflow: hidden;
+}
 .loading {
   position: absolute;
   z-index: 9000;
