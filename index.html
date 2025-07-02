@@ -2,21 +2,22 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>뮤직클릭</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.css" />
     <script src="assets/js/index.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head> 
 <body>
-
-    <div class="box loading">
-<!--         <div class="loader10"></div> -->
-    </div>
-
     
+    <!-- <div class="loading">
+    </div> -->
+
     <!--____header.html____-->
     <header class="header">
         <a href="#" class="link-back"><img src="assets/img/ico-back.svg" alt="뒤로가기"></a>
@@ -26,955 +27,1134 @@
     </header>
     <!--____header.html____-->
 
-
     <div class="cont-wrap">
         <!--____tab.html____-->
-        <ul class="tabs" role="tablist">
-            <li class="tab-item">
-              <button class="tab active" role="tab" aria-selected="true">전체</button>
-            </li>
-            <li class="tab-item">
-              <button class="tab" role="tab" aria-selected="false">휴식</button>
-            </li>
-            <li class="tab-item">
-              <button class="tab" role="tab" aria-selected="false">집중</button>
-            </li>
-            <li class="tab-item">
-              <button class="tab" role="tab" aria-selected="false">운동</button>
-            </li>
-            <li class="tab-item">
-              <button class="tab" role="tab" aria-selected="false">행복한 기분플리</button>
-            </li>
-            <li class="tab-item">
-            <button class="tab" role="tab" aria-selected="false">집중</button>
-            </li>
-            <li class="tab-item">
-              <button class="tab" role="tab" aria-selected="false">운동</button>
-            </li>
-            <li class="tab-item">
-              <button class="tab" role="tab" aria-selected="false">행복한 기분플리</button>
-            </li>
-            <li class="tab-item">
-              <button class="tab" role="tab" aria-selected="false">집중</button>
-            </li>
-            <li class="tab-item">
-              <button class="tab" role="tab" aria-selected="false">운동</button>
-            </li>
-            <li class="tab-item">
-              <button class="tab" role="tab" aria-selected="false">행복한 기분플리</button>
-            </li>
-        </ul>
-        <!--____tab.html____-->
-
+        <div class="swiper tab-swiper swiper-initialized swiper-horizontal swiper-android">
+            <ul class="swiper-wrapper tab-list" id="swiper-wrapper-3dc5d6101ace4414a" aria-live="polite">
+            
+                <li class="swiper-slide tab-item on swiper-slide-active" onclick="onTagClick('0')" role="group" aria-label="1 / 12" style="margin-right: 8px;">
+                    <a href="#">전체</a>
+                </li>
+            
+                <li class="swiper-slide tab-item swiper-slide-next" onclick="onTagClick('1')" role="group" aria-label="2 / 12" style="margin-right: 8px;">
+                    <a href="#">운동</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('2')" role="group" aria-label="3 / 12" style="margin-right: 8px;">
+                    <a href="#">집중</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('4')" role="group" aria-label="4 / 12" style="margin-right: 8px;">
+                    <a href="#">휴식</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('8')" role="group" aria-label="5 / 12" style="margin-right: 8px;">
+                    <a href="#">출퇴근</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('16')" role="group" aria-label="6 / 12" style="margin-right: 8px;">
+                    <a href="#">드라이빙</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('32')" role="group" aria-label="7 / 12" style="margin-right: 8px;">
+                    <a href="#">여행</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('64')" role="group" aria-label="8 / 12" style="margin-right: 8px;">
+                    <a href="#">신나는</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('128')" role="group" aria-label="9 / 12" style="margin-right: 8px;">
+                    <a href="#">분위기 있는</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('256')" role="group" aria-label="10 / 12" style="margin-right: 8px;">
+                    <a href="#">우울할 때</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('512')" role="group" aria-label="11 / 12" style="margin-right: 8px;">
+                    <a href="#">자기 전1</a>
+                </li>
+            
+                <li class="swiper-slide tab-item" onclick="onTagClick('1024')" role="group" aria-label="12 / 12" style="margin-right: 8px;">
+                    <a href="#">일할 때</a>
+                </li>
+            
+            </ul>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true">
+            </span>
+        </div>
+        
 
         <!--____배너 슬라이드____-->
         <div class="swiper banner">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="sub.html">
-                        <div class="thumb-area">
-                            <img src="./assets/img/dummy.png" alt="배너이미지">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="sub.html">
+                                <div class="thumb-area">
+                                    <img src="assets/img/smple.jpeg" alt="배너이미지">
+                                </div>
+                                <div class="info-area">
+                                    <p>영역변경 여백변경 영역변경 여백변경지수 취향 그대로 담은 ‘earthquake’</p>
+                                    <span>노래듣고, 리워드도 받으세요!</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="info-area">
-                            <p>영역변경 여백변경 영역변경 여백변경지수 취향 그대로 담은 ‘earthquake’</p>
-                            <span>노래듣고, 리워드도 받으세요!</span>
+                        <div class="swiper-slide">
+                            <a href="sub.html">
+                                <div class="thumb-area">
+                                    <img src="assets/img/dummy.png" alt="배너이미지">
+                                </div>
+                                <div class="info-area">
+                                    <p>지수 취향 그대로 담은 ‘earthquake’</p>
+                                    <span>노래듣고, 리워드도 받으세요!</span>
+                                </div>
+                            </a>
                         </div>
-                    </a>
+                        <div class="swiper-slide">
+                            <a href="sub.html">
+                                <div class="thumb-area">
+                                    <img src="assets/img/dummy.png" alt="배너이미지">
+                                </div>
+                                <div class="info-area">
+                                    <p>지수 취향 그대로 담은 ‘earthquake’</p>
+                                    <span>노래듣고, 리워드도 받으세요!</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-slide">
-                    <a href="sub.html">
-                        <div class="thumb-area">
-                            <img src="./assets/img/dummy.png" alt="배너이미지">
-                        </div>
-                        <div class="info-area">
-                            <p>지수 취향 그대로 담은 ‘earthquake’</p>
-                            <span>노래듣고, 리워드도 받으세요!</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="sub.html">
-                        <div class="thumb-area">
-                            <img src="./assets/img/dummy.png" alt="배너이미지">
-                        </div>
-                        <div class="info-area">
-                            <p>지수 취향 그대로 담은 ‘earthquake’</p>
-                            <span>노래듣고, 리워드도 받으세요!</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
         <!--____배너 슬라이드____-->
-
-
-                <!-- hot Pick -->
+    
+        <!-- hot Pick -->
         <h3 class="titleTxt txt-01">Hot Pick</h3>
         <div class="swiper-overflow">
-            <div class="slideCont hot">
-                <div class="swiper hot-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <ul class="card card-column">
-                                <li class="list">
-                                    <a href="sub.html">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="txtBox">
-                                                <p class="title">1-1 슬라이드슬라이드슬라이드슬라이드슬라이드슬라이드슬라이드</p>
-                                                <span class="artist">1-1 슬라이드슬라이드슬라이드슬라이드슬라이드슬라이드슬라이드</span>
-                                            </div>
-                                            <!--____badgeBox.html____-->
-                                            <div class="badgeBox">
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                    <div class="slideCont hot">
+                        <div class="swiper hot-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <ul class="card card-column">
+                                        <li class="list">
+                                            <a href="sub.html">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/smple.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                        
-                                        
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-waiting">23:59:59</span>
-                                                <!--____badge.html____-->
-                                            </div>
-                                            <!--____badge.html____-->
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="sub.html">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd02.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="txtBox">
-                                                <p class="title">1-2 슬라이드</p>
-                                                <span class="artist">1-2 슬라이드</span>
-                                            </div>
-                                            <!--____badgeBox.html____-->
-                                            <div class="badgeBox">
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="txtBox">
+                                                        <p class="title">1-1 슬라이드</p>
+                                                        <span class="artist">1-1 슬라이드슬라이드슬라이드슬라이드슬라이드슬라이드슬라이드</span>
+                                                    </div>
+                                                    <!--____badgeBox.html____-->
+                                                    <div class="badgeBox">
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    
+                                                    
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-waiting">23:59:59</span>
+                                                        <!--____badge.html____-->
+                                                    </div>
+                                                    <!--____badge.html____-->
                                                 </div>
-                                                <!--____tag.html____-->
-                                        
-                                        
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                            </div>
-                                            <!--____badge.html____-->
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="swiper-slide">
-                            <ul class="card card-column">
-                                <li class="list">
-                                    <a href="sub.html">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="txtBox">
-                                                <p class="title">2-1 슬라이드</p>
-                                                <span class="artist">2-1 슬라이드</span>
-                                            </div>
-                                            <!--____badgeBox.html____-->
-                                            <div class="badgeBox">
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="sub.html">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/dummy-prd02.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                        
-                                        
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-waiting">23:59:59</span>
-                                                <!--____badge.html____-->
-                                            </div>
-                                            <!--____badge.html____-->
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="sub.html">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="txtBox">
-                                                <p class="title">2-2 슬라이드2-2 슬라이드2-2 슬라이드2-2 슬라이드2-2 슬라이드2-2 슬라이드</p>
-                                                <span class="artist">2-2 슬라이드2-2 슬라이드2-2 슬라이드2-2 슬라이드2-2 슬라이드</span>
-                                            </div>
-                                            <!--____badgeBox.html____-->
-                                            <div class="badgeBox">
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="txtBox">
+                                                        <p class="title">1-2 슬라이드</p>
+                                                        <span class="artist">1-2 슬라이드</span>
+                                                    </div>
+                                                    <!--____badgeBox.html____-->
+                                                    <div class="badgeBox">
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    
+                                                    
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                    </div>
+                                                    <!--____badge.html____-->
                                                 </div>
-                                                <!--____tag.html____-->
-                                        
-                                        
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                            </div>
-                                            <!--____badge.html____-->
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="swiper-slide">
-                            <ul class="card card-column">
-                                <li class="list">
-                                    <a href="sub.html">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="txtBox">
-                                                <p class="title">3-1 슬라이드</p>
-                                                <span class="artist">3-1 슬라이드</span>
-                                            </div>
-                                            <!--____badgeBox.html____-->
-                                            <div class="badgeBox">
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="card card-column">
+                                        <li class="list">
+                                            <a href="sub.html">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/dummy-prd03.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                        
-                                        
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-waiting">23:59:59</span>
-                                                <!--____badge.html____-->
-                                            </div>
-                                            <!--____badge.html____-->
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="sub.html">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="txtBox">
-                                                <p class="title">3-2 슬라이드</p>
-                                                <span class="artist">3-2 슬라이드</span>
-                                            </div>
-                                            <!--____badgeBox.html____-->
-                                            <div class="badgeBox">
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="txtBox">
+                                                        <p class="title">2-1 슬라이드</p>
+                                                        <span class="artist">2-1 슬라이드</span>
+                                                    </div>
+                                                    <!--____badgeBox.html____-->
+                                                    <div class="badgeBox">
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    
+                                                    
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-waiting">23:59:59</span>
+                                                        <!--____badge.html____-->
+                                                    </div>
+                                                    <!--____badge.html____-->
                                                 </div>
-                                                <!--____tag.html____-->
-                                        
-                                        
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                            </div>
-                                            <!--____badge.html____-->
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="swiper-slide">
-                            <ul class="card card-column">
-                                <li class="list">
-                                    <a href="sub.html">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="txtBox">
-                                                <p class="title">4-1 슬라이드</p>
-                                                <span class="artist">4-1 슬라이드</span>
-                                            </div>
-                                            <!--____badgeBox.html____-->
-                                            <div class="badgeBox">
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="sub.html">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                        
-                                        
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-waiting">23:59:59</span>
-                                                <!--____badge.html____-->
-                                            </div>
-                                            <!--____badge.html____-->
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="sub.html">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="txtBox">
-                                                <p class="title">4-2 슬라이드</p>
-                                                <span class="artist">4-2 슬라이드</span>
-                                            </div>
-                                            <!--____badgeBox.html____-->
-                                            <div class="badgeBox">
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="txtBox">
+                                                        <p class="title">2-2 슬라이드2-2 슬라이드2-2 슬라이드2-2 슬라이드</p>
+                                                        <span class="artist">2-2 슬라이드2-2 슬라이드2-2 슬라이드2-2 슬라이드2-2 슬라이드</span>
+                                                    </div>
+                                                    <!--____badgeBox.html____-->
+                                                    <div class="badgeBox">
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    
+                                                    
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                    </div>
+                                                    <!--____badge.html____-->
                                                 </div>
-                                                <!--____tag.html____-->
-                                        
-                                        
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                            </div>
-                                            <!--____badge.html____-->
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="card card-column">
+                                        <li class="list">
+                                            <a href="sub.html">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/smple.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="txtBox">
+                                                        <p class="title">3-1 슬라이드</p>
+                                                        <span class="artist">3-1 슬라이드</span>
+                                                    </div>
+                                                    <!--____badgeBox.html____-->
+                                                    <div class="badgeBox">
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    
+                                                    
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-waiting">23:59:59</span>
+                                                        <!--____badge.html____-->
+                                                    </div>
+                                                    <!--____badge.html____-->
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="sub.html">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="txtBox">
+                                                        <p class="title">3-2 슬라이드</p>
+                                                        <span class="artist">3-2 슬라이드</span>
+                                                    </div>
+                                                    <!--____badgeBox.html____-->
+                                                    <div class="badgeBox">
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    
+                                                    
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                    </div>
+                                                    <!--____badge.html____-->
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="card card-column">
+                                        <li class="list">
+                                            <a href="sub.html">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/dummy-prd02.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="txtBox">
+                                                        <p class="title">4-1 슬라이드</p>
+                                                        <span class="artist">4-1 슬라이드</span>
+                                                    </div>
+                                                    <!--____badgeBox.html____-->
+                                                    <div class="badgeBox">
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    
+                                                    
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-waiting">23:59:59</span>
+                                                        <!--____badge.html____-->
+                                                    </div>
+                                                    <!--____badge.html____-->
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="sub.html">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/dummy-prd02.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="txtBox">
+                                                        <p class="title">4-2 슬라이드</p>
+                                                        <span class="artist">4-2 슬라이드</span>
+                                                    </div>
+                                                    <!--____badgeBox.html____-->
+                                                    <div class="badgeBox">
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    
+                                                    
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                    </div>
+                                                    <!--____badge.html____-->
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
+        </div>
+
+
+        <!-- shorts 슬라이드 -->
+        <div class="shortsCnt">
+            <h3 class="titleTxt txt-02">Shorts</h3>
+            <!-- Swiper container -->
+            <div class="swiper shorts-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <div class="shorts-card">
+                        <div class="shorts-thumb">
+                            <img src="./assets/img/shorts-smple.png" alt>
+                            <div class="shorts-txt">
+                                <p>쇼츠 타이틀을 입력해주세요. 두 줄 말줄임입니다.쇼츠 타이틀을 입력해주세요. 두 줄 말줄임입니다.</p>
+                            </div>
+                        </div>
+                        <div class="badgeBox">
+                            <div class="tag e-tag">
+                                <span class="circle">P</span>
+                                <span class="value">15</span>
+                            </div>
+                            <!-- <span class="badge ebadge-12">12시간마다</span> -->
+                            <!-- <span class="badge ebadge-24">24시간마다</span> -->
+                            <span class="badge ebadge-waiting">23:59:59</span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="shorts-card">
+                        <div class="shorts-thumb">
+                            <img src="./assets/img/dummy-prd.png" alt>
+                            <div class="shorts-txt">
+                                <p>쇼츠 타이틀 한줄 일 때</p>
+                            </div>
+                        </div>
+                        <div class="badgeBox">
+                            <div class="tag e-tag">
+                                <span class="circle">P</span>
+                                <span class="value">15</span>
+                            </div>
+                            <span class="badge ebadge-12">12시간마다</span>
+                            <!-- <span class="badge ebadge-24">24시간마다</span> -->
+                            <!-- <span class="badge ebadge-waiting">23:59:59</span> -->
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="shorts-card">
+                        <div class="shorts-thumb">
+                            <img src="./assets/img/dummy-prd03.png" alt>
+                            <div class="shorts-txt">
+                                <p>쇼츠 타이틀을 입력해주세요</p>
+                            </div>
+                        </div>
+                        <div class="badgeBox">
+                            <div class="tag e-tag">
+                                <span class="circle">P</span>
+                                <span class="value">15</span>
+                            </div>
+                            <!-- <span class="badge ebadge-12">12시간마다</span> -->
+                            <span class="badge ebadge-24">24시간마다</span>
+                            <!-- <span class="badge ebadge-waiting">23:59:59</span> -->
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="shorts-card">
+                        <div class="shorts-thumb">
+                            <img src="./assets/img/dummy.png" alt>
+                            <div class="shorts-txt">
+                                <p>쇼츠 타이틀을 입력해주세요. 두 줄 말줄임입니다.</p>
+                            </div>
+                        </div>
+                        <div class="badgeBox">
+                            <div class="tag e-tag">
+                                <span class="circle">P</span>
+                                <span class="value">15</span>
+                            </div>
+                            <span class="badge ebadge-12">12시간마다</span>
+                            <!-- <span class="badge ebadge-24">24시간마다</span> -->
+                            <!-- <span class="badge ebadge-waiting">23:59:59</span> -->
+                        </div>
+                    </div>
+                    </div>
+                    <!-- 필요시 슬라이드 더 추가 -->
                 </div>
             </div>
         </div>
 
+        <!-- 살짝먼저들어볼까요,하루 -->
         <div class="p-20">
-            <h3 class="titleTxt txt-02">살짝 먼저 들어볼까요?</h3>
-            <div class="slideCont prev">
-                <div class="swiper prev-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <ul class="card card-row type2">
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">1-1 슬라이드</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                    <h3 class="titleTxt txt-02">살짝 먼저 들어볼까요?</h3>
+                    <div class="slideCont prev">
+                        <div class="swiper prev-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <ul class="card card-row type2">
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/smple.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">1-2 슬라이드1-2 슬라이드1-2 슬라이드1-2 슬라이드</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">KATSEYEKATSEYEKATSEYEKATSEYEKATSEYEKATSEYE</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">1-1 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-24">3시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">1-3 슬라이드1-3 슬라이드1-3 슬라이드1-3 슬라이드</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                            </a>
+                                        </li>
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">1-4 슬라이드</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">1-2 슬라이드1-2 슬라이드1-2 슬라이드1-2 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">KATSEYEKATSEYEKATSEYEKATSEYEKATSEYEKATSEYE</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="swiper-slide">
-                            <ul class="card card-row type2">
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-24">3시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">KATSEYEKATSEYEKATSEYEKATSEYEKATSEYEKATSEYE</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-24">3시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">1-3 슬라이드1-3 슬라이드1-3 슬라이드1-3 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">1-4 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="swiper-slide">
-                            <ul class="card card-row type2">
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="card card-row type2">
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/smple.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="titleTxt txt-02">편하게 들어보세요.</h3>
-            <div class="slideCont recomm">
-                <div class="swiper recomm-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <ul class="card card-row type3">
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="swiper-slide">
-                            <ul class="card card-row type3">
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="swiper-slide">
-                            <ul class="card card-row type3">
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="swiper-slide">
-                            <ul class="card card-row type3">
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">2-1 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">2-2 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">KATSEYEKATSEYEKATSEYEKATSEYEKATSEYEKATSEYE</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-24">3시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">2-3 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">2-4 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="card card-row type2">
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="./assets/img/smple.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">3-1 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">3-2 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">KATSEYEKATSEYEKATSEYEKATSEYEKATSEYEKATSEYE</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-24">3시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">3-3 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">3-4 슬라이드</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <h3 class="titleTxt txt-02">하루를 채워줄 음악,<br />여기에 다 있어요.</h3>
-            <ul class="card card-row type2">
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+    
+                    <h3 class="titleTxt txt-02">편하게 들어보세요.</h3>
+                    <div class="slideCont recomm">
+                        <div class="swiper recomm-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <ul class="card card-row type3">
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/smple.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--____cardRow.html____-->
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">KATSEYEKATSEYEKATSEYEKATSEYEKATSEYEKATSEYE</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-24">3시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                            </a>
+                                        </li>
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list">
-                                    <a href="#">
-                                        <div class="thumb-area">
-                                            <img src="./assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
-                                        </div>
-                                        <div class="info-area">
-                                            <div class="col-top">
-                                                <!--____badge.html____-->
-                                                <span class="badge ebadge-12">12시간마다</span>
-                                                <!--____badge.html____-->
-                                                <p class="title">Touch Touch Touch Touch Touch Touch</p>
-                                            </div>
-                                            <div class="col-bottom">
-                                                <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
-                                                <!--____tag.html____-->
-                                                <div class="tag e-tag">
-                                                    <span class="circle">P</span>
-                                                    <span class="value">15</span>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
                                                 </div>
-                                                <!--____tag.html____-->
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-            </ul>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="card card-row type3">
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="card card-row type3">
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">
+                                    <ul class="card card-row type3">
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <h3 class="titleTxt txt-02">하루를 채워줄 음악,<br />여기에 다 있어요.</h3>
+                    <ul class="card card-row type2">
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!--____cardRow.html____-->
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">KATSEYEKATSEYEKATSEYEKATSEYEKATSEYEKATSEYE</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-24">3시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#">
+                                                <div class="thumb-area">
+                                                    <img src="../assets/img/dummy-prd.png" alt="TOO BAD G-DRAGON" />
+                                                </div>
+                                                <div class="info-area">
+                                                    <div class="col-top">
+                                                        <!--____badge.html____-->
+                                                        <span class="badge ebadge-12">12시간마다</span>
+                                                        <!--____badge.html____-->
+                                                        <p class="title">Touch Touch Touch Touch Touch Touch</p>
+                                                    </div>
+                                                    <div class="col-bottom">
+                                                        <span class="artist">G-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGONG-DRAGON</span>
+                                                        <!--____tag.html____-->
+                                                        <div class="tag e-tag">
+                                                            <span class="circle">P</span>
+                                                            <span class="value">15</span>
+                                                        </div>
+                                                        <!--____tag.html____-->
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                    </ul>
         </div>
 
 
@@ -985,8 +1165,6 @@
             </svg>
         </div>
         <!-- floatButton.html -->
-
-
 
     </div>
 </body>
