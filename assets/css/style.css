@@ -22,10 +22,11 @@
     position: relative !important;
     padding: 8px 25px 22px 20px;
     overflow: hidden; 
+    border: 3px solid blue;
   }
   .banner .swiper-slide {
     position: relative;
-    width: 100%; 
+    width: 100%; /* 한 화면에 거의 다 차지하되 */
     border-radius: 20px;
     overflow: hidden;
     flex-shrink: 0;
@@ -57,6 +58,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .banner .info-area {
     position:absolute;
@@ -97,6 +102,7 @@
 
 
 
+
   /* hot pick 슬라이드 */
   .slideCont.hot {
     width: 78.88vw !important;
@@ -111,13 +117,12 @@
   }
   .slideCont.hot .card-column .info-area {
     margin-top: 2px;
-    min-height: 113px;
+    /* min-height: 113px; */
   }
   .slideCont.hot .card .info-area .artist {
     margin-top: 0;
   }
-
- .swiper-overflow {
+  .swiper-overflow {
     margin-left: 20px;
     overflow: hidden;
   }
@@ -128,6 +133,90 @@
   .txt-01 {
     padding-left: 20px;
   }
+  .slideCont.hot .card-column .info-area .tag {
+    gap: 4px;
+  }
+  .slideCont.hot .card-column .info-area .tag .value {
+    font-size: var(--font-h4-size);
+    line-height: var(--font-h4-height);
+    font-weight: var(--font-h4-weight);
+    letter-spacing: var(--font-h4-spacing);
+  }
+  /* .titleTxt.txt-02 {
+    margin-top: 48px;
+  } */
+
+
+  
+
+
+
+  /* 쇼츠 슬라이드 */
+  .shortsCnt {
+    margin-left: 20px;
+    overflow: hidden;
+  }
+  .shortsCnt .shorts-swiper {
+    margin-top: 12px;
+  }
+  .shortsCnt .swiper-slide {
+    /* width: calc((100% - 20px) / 2);  */
+    width: 48.61vw;
+    box-sizing: border-box;
+  }
+  .shortsCnt .shorts-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .shortsCnt .shorts-card .shorts-thumb {
+    overflow: hidden;
+    border-radius: 12px;
+    width: 100%;
+    aspect-ratio: 175 / 284;
+    position: relative;
+  }
+  .shortsCnt .shorts-card .shorts-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .shortsCnt .shorts-card .shorts-thumb .shorts-txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 10px 10px;
+    background: linear-gradient(180deg, rgba(22, 24, 29, 0) 0%, #16181D 100%);
+  }
+  .shortsCnt .shorts-card .shorts-thumb .shorts-txt p {
+    color: #fff;
+    font-size: var(--font-small-size);
+    font-weight: var(--font-small-weight);
+    line-height: var(--font-small-line);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .shortsCnt .badgeBox {
+    margin-top: 6px;
+    width: 100%;
+    padding: 0;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -143,13 +232,7 @@
   .titleTxt.txt-02 {
     margin-top: 48px;
   }
-  .slideCont.hot .card-column .info-area .tag {
-    gap: 4px;
-  }
-  .slideCont.hot .card-column .info-area .tag .value {
-	font-size: 18px;
-       letter-spacing: -0.36px;
-  }
+
 
 
 
@@ -789,8 +872,68 @@
 
 
 
+/* 유튜브 로그인 인증 */
+.container.yt {
+  height: 100vh;
+  margin-top: 0;
+}
+.container.yt > p:nth-of-type(1) {
+  color: #1A1D23;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: var(--font-semibold);
+  line-height: 1.4;
+  letter-spacing: -0.48px;
+}
+.container.yt-step1 {
+  padding-top: 80px;
+}
+.container.yt-step1 > p:nth-of-type(2) {
+  margin-top: 16px;
+  color: #6E7891;
+  font-size: 17px;
+  font-weight: var(--font-semibold);
+  line-height: 1.5;
+  letter-spacing: -0.36px;
+  position: relative;
+}
+.container.yt-step1 > p:nth-of-type(2) span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.container.yt-step1 > p:nth-of-type(2) span::after {
+  content: '';
+  background: url(../img/contact.jpg) no-repeat center / 100%;
+  width: 24px;
+  height: 24px;
+  margin-left: 3px;
+  margin-top: -3px;
+}
+.container.yt-step2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.container.yt-step2 > p:nth-of-type(2) {
+  margin-top: 16px;
+  font-size: var(--font-small-size);
+  font-weight: var(--font-small-weight);
+  line-height: var(--font-small-line);
+  color: #6E7891;
+}
 
-Bar.shorts {
+
+
+
+
+
+/* shorts.html */
+/* 토스트바 */
+.toastBar.shorts {
   gap: 6px;
   background: #2E323D;
   box-shadow: 0px 0px 24px rgba(26.40, 28.80, 34.80, 0.15);
@@ -817,7 +960,7 @@ Bar.shorts {
   box-shadow: unset;
   background: linear-gradient(180deg, #16181D 0%, rgba(22, 24, 29, 0)100%);
 }
-.header.shorts .link-back{
+.header.shorts .link-back {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -839,19 +982,18 @@ header.shorts svg path {
   width: 100%;
   z-index: 1000;
 }
-.progress-bar {
+.progress-bar-wrap.shorts .progress-bar {
   position: relative;
   height: 3px;
   background-color: #D1D5DC;
 } 
-.progress-bar.progress::before {
+.progress-bar-wrap.shorts .progress-bar.progress::before {
   content: "";
   position: absolute;
   height: 3px;
   background-color: #50bfa5;
   width: 30%;
 }
-
 .video-card {
   position: relative;
   width: 100vw;
@@ -875,7 +1017,6 @@ header.shorts svg path {
 }
 .text {
   padding: 2px 0;
-  flex: 1;
   overflow: hidden;
 }
 .text p {
@@ -917,7 +1058,7 @@ header.shorts svg path {
   line-height: 1.5;
 }
 .meta {
-  padding: 2px 0;
+  margin-top: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -931,12 +1072,19 @@ header.shorts svg path {
   font-size: 12px;
   font-weight: var(--font-semibold);
   line-height: 24px;
+  border-radius: 6px;
+}
+.meta .time.type1 {
   color: #FF5436;
   border: 1px solid rgba(255, 84, 54, 0.20);
   background: rgba(255, 84, 54, 0.15);
-  border-radius: 6px;
 }
-.meta .time.exp {
+.meta .time.type2 {
+  color: #0064FF;
+  background: rgba(0, 100, 255, 0.15);
+  border: 1px solid rgba(0, 100, 255, 0.20);
+}
+.meta .time.type3 {
   color: #F6F7F8;
   background: rgba(246, 247, 248, 0.15);
   border: 1px solid rgba(246, 247, 248, 0.15);
@@ -1019,30 +1167,6 @@ header.shorts svg path {
 
 
 
-/* shorts */
-.popup.type3.shorts {
-  background: #2E323D;
-  z-index: 1000;
-}
-.popup.type3.shorts .popup-body h3 {
-  color: #74C6C6;
-}
-.popup.type3.shorts .popup-body p {
-  color: #EBECF0;
-}
-.fade-up {
-  animation: fadeUp 0.6s ease-out forwards;
-}
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translate(-50%,40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%,0);
-  }
-}
 
 
 
