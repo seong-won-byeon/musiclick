@@ -1,23 +1,32 @@
+
+
+
+
+
 // 메인 탭 슬라이드
-const tabSwiper = new Swiper('.tab-swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 8,
-});
+// const tabSwiper = new Swiper('.tab-swiper', {
+//   slidesPerView: 'auto',
+//   spaceBetween: 8,
+// });
 
 
-$('.tab-swiper .tab-item a').click(function (e) {
-  e.preventDefault();
-  var index = $(this).parent('li').index();
-  var goIndex = (index <= 3) ? 0 :index;
-  // 탭에 .on 클래스 수동 적용
-  $('.tab-swiper .tab-item').removeClass('on');
-  $(this).parent().addClass('on');
+// $('.tab-swiper .tab-item a').click(function (e) {
+//   e.preventDefault();
+//   var index = $(this).parent('li').index();
+//   var goIndex = (index <= 3) ? 0 :index;
+//   $('.tab-swiper .tab-item').removeClass('on');
+//   $(this).parent().addClass('on');
 
-  // 슬라이드 이동
-  tabSwiper.slideTo(goIndex, 300);
-});
+//   tabSwiper.slideTo(goIndex, 300);
+// });
 
 
+function openCont(tabName) {
+  document.querySelectorAll('.cnt, .tabs').forEach(function(el) {
+      el.classList.remove('on');
+  });
+  document.getElementById(tabName).classList.add('on');
+}
 
 
 
@@ -31,6 +40,8 @@ const swiper = new Swiper('.banner', {
     el: '.banner .swiper-pagination',
     clickable: true,
   },
+  observer: true,
+  observeParents: true,
   breakpoints: {
     // 320~542px → spaceBetween: 12
     0: {
@@ -45,9 +56,16 @@ const swiper = new Swiper('.banner', {
 
 
 
-
-
-
+// 메인 hotpick 슬라이드
+// const hotSwiper = new Swiper('.hot-swiper', { 
+//   initialSlide: 0,        /* 0번(첫번째)슬라이드부터 시작됨 */
+//   slidesPerView:'auto',   /* 각 슬라이드의 가로 너비(width)에 따라 자동 */
+//   slidesPerGroup: 1,      /* 정수, 한번에 넘기는 슬라이드 개수 */
+//   spaceBetween: 12,
+//   loop:true,
+//   observer: true,           /* 슬라이드 내부의 DOM 변화가 생기면 자동으로 업데이트 */
+//   observeParents: true,     /* 슬라이더의 부모 요소에 변화가 생겨도 자동으로 업데이트 */
+// });
 
 // 메인 hotpick 슬라이드
 const hotSwiper = new Swiper('.hot-swiper', {
@@ -61,15 +79,26 @@ const hotSwiper = new Swiper('.hot-swiper', {
 
 
 
+// 쇼츠 슬라이드(임시)
+const shortsSwiper = new Swiper(".shorts-swiper", {
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  freeMode: true
+});
+
+
+
 // 살짝 먼저 들어볼까요
 const prevSwiper = new Swiper('.prev-swiper', {
   initialSlide: 0,
-  slidesPerView: 1,
-  slidesPerGroup: 1,
+  // slidesPerView: 'auto',
+  // slidesPerGroup: 1,
   spaceBetween: 20,
   loop:true,
-  loopAdditionalSlides: 3,
-  speed: 350,  // 350ms → 0.35초 동안 슬라이드 이동
+  speed: 350,  
+  loopAdditionalSlides: 1,
+  observer: true,
+  observeParents: true,
 });
 
 
@@ -77,12 +106,14 @@ const prevSwiper = new Swiper('.prev-swiper', {
 // 편하게 들어보세요
 const recommSwiper = new Swiper('.recomm-swiper', {
   initialSlide: 0,
-  slidesPerView: 1,
-  slidesPerGroup: 1,
+  slidesPerView: 'auto',
+  // slidesPerGroup: 1,
   spaceBetween: 20,
   loop:true,
-  loopAdditionalSlides: 3,
-  speed: 350,  // 350ms → 0.35초 동안 슬라이드 이동
+  loopAdditionalSlides: 2,
+  speed: 350, 
+  observer: true,
+  observeParents: true,
 });
 
 
@@ -103,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
- // 메인 탭메뉴 클릭시 스타일';
+  
+  // 메인 탭메뉴 클릭시 스타일
   const tabButtons = document.querySelectorAll('.tab');
   const loading = document.querySelector('.loading');
 
@@ -128,10 +159,10 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         loading.classList.remove('fade-in');
         document.body.classList.remove('hidden');
-      },300); // transition 시간과 맞춰야 함
+      }, 500); // transition 시간과 맞춰야 함
     });
   });
-
+  
 
 
   // 상세 가사 더보기 클릭시
@@ -180,14 +211,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // 고객센터 FAQ 아코디언 
-  const headers = document.querySelectorAll('.ac-header');
-
-  headers.forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.parentElement;
-      item.classList.toggle('active');
-    });
+  // 수정 후
+  $(".contact-faq .ac-header").click(function() {
+    $(this).next(".ac-cont").stop().slideToggle(300);
+    $(this).toggleClass('active');
   });
+
+
+
+  
 
 
 
@@ -224,105 +256,118 @@ document.addEventListener('DOMContentLoaded', () => {
       bodyCont.style.top = "";
       window.scrollTo(0, scrollY);
     });
-
   }
 
 
 
 
-
-
-
   // select box 드롭다운
-  const customSelect = document.getElementById('customSelect');
-  const dropdownList = customSelect.querySelector('.dropdown-list');
-  const placeholder = customSelect.querySelector('.placeholder');
-  const options = dropdownList.querySelectorAll('li');
-  const hiddenInput = document.getElementById('inquiryType');
+  // const customSelect = document.getElementById('customSelect');
+  // const dropdownList = customSelect.querySelector('.dropdown-list');
+  // const placeholder = customSelect.querySelector('.placeholder');
+  // const options = dropdownList.querySelectorAll('li');
+  // const hiddenInput = document.getElementById('inquiryType');
 
-  // 셀렉트 클릭 시 드롭다운 토글
-  customSelect.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
-    customSelect.classList.toggle('focus');
-  });
+  // customSelect.addEventListener('click', (e) => {
+  //   e.stopPropagation();
+  //   dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
+  //   customSelect.classList.toggle('focus');
+  // });
 
-  // 옵션 선택
-  options.forEach(option => {
-    option.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const selectedValue = option.textContent;
+  // options.forEach(option => {
+  //   option.addEventListener('click', (e) => {
+  //     e.stopPropagation();
+  //     const selectedValue = option.textContent;
 
-      // 선택값 표시
-      placeholder.textContent = selectedValue;
-      placeholder.classList.add('selected');
-      hiddenInput.value = selectedValue;
+  //     placeholder.textContent = selectedValue;
+  //     placeholder.classList.add('selected');
+  //     hiddenInput.value = selectedValue;
 
-      // 선택 스타일 적용
-      options.forEach(opt => opt.classList.remove('selected'));
-      option.classList.add('selected');
+  //     options.forEach(opt => opt.classList.remove('selected'));
+  //     option.classList.add('selected');
 
-      // 드롭다운 닫기
-      dropdownList.style.display = 'none';
-      customSelect.classList.remove('focus');
+  //     dropdownList.style.display = 'none';
+  //     customSelect.classList.remove('focus');
+  //   });
+  // });
+
+  // document.addEventListener('click', () => {
+  //   dropdownList.style.display = 'none';
+  //   customSelect.classList.remove('focus');
+  // });
+
+
+
+  // const customText = document.getElementById("customText");
+
+  // textarea.addEventListener("focus", () => {
+  //   customText.classList.add("focus");
+  // });
+
+  // textarea.addEventListener("blur", () => {
+  //   customText.classList.remove("focus");
+  // });
+
+  // textarea.addEventListener("input", () => {
+  //   charCount.textContent = `${textarea.value.length}/200`;
+  // });
+  // textarea.addEventListener("input", () => {
+  //   charCount.textContent = textarea.value.length;
+  // });
+
+
+
+
+  // const input = document.getElementById('useremail');
+  // const customInput = document.getElementById('customInput');
+
+  // input.addEventListener('focus', () => {
+  //   customInput.classList.add('focus');
+  // });
+
+  // input.addEventListener('blur', () => {
+  //   customInput.classList.remove('focus');
+  // });
+
+
+
+
+
+  // shorts 바텀시트
+  const startBtn = document.querySelector('.bottom-sheet.shorts .close');
+  const dimmed = document.getElementById('dimmed'); 
+  const shortsBot = document.getElementById('shortsBottom');
+  const bodyshortCont = document.body;
+  
+  // ✅ 페이지 진입 시 바텀시트 열기
+  if (dimmed && shortsBot) {
+    window.addEventListener('DOMContentLoaded', () => {
+      // 바텀시트 show
+      dimmed.classList.add('show');
+      shortsBot.classList.add('show');
+  
+      // body 고정
+      const scrollY = window.scrollY;
+      bodyshortCont.style.top = `-${scrollY}px`;
+      bodyshortCont.classList.add('fixed');
+      bodyshortCont.dataset.scrollY = scrollY;
     });
-  });
-
-  // 바깥 클릭 시 닫기
-  document.addEventListener('click', () => {
-    dropdownList.style.display = 'none';
-    customSelect.classList.remove('focus');
-  });
-
-
-
+  }
   
-
-
-
-  // textarea
-  const customText = document.getElementById("customText");
-
-  textarea.addEventListener("focus", () => {
-    customText.classList.add("focus");
-  });
-
-  textarea.addEventListener("blur", () => {
-    customText.classList.remove("focus");
-  });
-
-  textarea.addEventListener("input", () => {
-    charCount.textContent = `${textarea.value.length}/200`;
-  });
-  // 글자 수 세기
-  textarea.addEventListener("input", () => {
-    charCount.textContent = textarea.value.length;
-  });
-
-
-
-
-
-
+  // ✅ 버튼 클릭 시 바텀시트 닫기
+  if (startBtn && dimmed && shortsBot) {
+    startBtn.addEventListener('click', function () {
+      dimmed.classList.remove('show');
+      shortsBot.classList.remove('show');
   
-
-
-  // 이메일 input
-  const input = document.getElementById('useremail');
-  const customInput = document.getElementById('customInput');
-
-  input.addEventListener('focus', () => {
-    customInput.classList.add('focus');
-  });
-
-  input.addEventListener('blur', () => {
-    customInput.classList.remove('focus');
-  });
-
-
-
-
-
+      // body 복원
+      const scrollY = bodyshortCont.dataset.scrollY || 0;
+      bodyshortCont.classList.remove('fixed');
+      bodyshortCont.style.top = '';
+      window.scrollTo(0, scrollY);
+    });
+  }
+  
 
 
 
