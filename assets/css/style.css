@@ -152,12 +152,8 @@
 
 
   /* 쇼츠 슬라이드 */
-  .shortsCnt {
-    margin-left: 20px;
-    overflow: hidden;
-  }
   .shortsCnt .shorts-swiper {
-    padding-right: 20px;
+    padding: 0 20px;
     margin-top: 12px;
   }
   .shortsCnt .swiper-slide {
@@ -182,13 +178,21 @@
     height: 100%;
     object-fit: cover;
   }
+  .shortsCnt .shorts-card .shorts-thumb .shorts-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18.333vw;
+    background: linear-gradient(180deg, rgba(22, 24, 29, 0) 0%, #16181D 100%);
+  }
   .shortsCnt .shorts-card .shorts-thumb .shorts-txt {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     padding: 16px 10px 10px;
-    background: linear-gradient(180deg, rgba(22, 24, 29, 0) 0%, #16181D 100%);
+    z-index: 10;
   }
   .shortsCnt .shorts-card .shorts-thumb .shorts-txt p {
     color: #fff;
@@ -206,8 +210,11 @@
     width: 100%;
     padding: 0;
   }
-  
-
+  .shortsCnt .tag .circle {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
 
 
 
