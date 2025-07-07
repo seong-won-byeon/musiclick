@@ -978,6 +978,7 @@ body.fixed {
   font-size: 12px;
   font-weight: var(--font-semibold);
 }
+
 .tag.e-tag .circle {
   background: #56B6AF;
 }
