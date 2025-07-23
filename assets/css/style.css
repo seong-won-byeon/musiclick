@@ -22,7 +22,6 @@
     position: relative !important;
     padding: 8px 25px 22px 20px;
     overflow: hidden; 
-    border: 3px solid blue;
   }
   .banner .swiper-slide {
     position: relative;
