@@ -106,6 +106,7 @@
 .swiper-overflow {
   overflow: hidden;
   margin-left: 20px;
+  margin-top: 12px;
 }
 .slideCont.hot {
   width: 100% !important;
