@@ -979,9 +979,50 @@ body.fixed {
   font-weight: var(--font-semibold);
 }
 
-.tag.e-tag .circle {
+
+
+
+
+
+/* 포인트 아이콘 수정 */
+.e-tag .tag-bg {
   background: #56B6AF;
 }
+.c-tag .tag-bg {
+  background: #FF3838;
+}
+.tag-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.tag-bg.w18 {
+  width: 18px;
+  height: 18px;
+}
+.tag-bg.w16 {
+  width: 16px;
+  height: 16px;
+}
+/* 컬처랜드 '₩' */
+.c-tag .w16 img {
+  width: 10px;
+}
+.c-tag .w18 img {
+  width: 11px;
+}
+/* 에브리클릭 'p' */
+.e-tag img {
+  margin-top: 1px;
+}
+.e-tag .w16 img {
+  width: 5px;
+}
+.e-tag .w18 img {
+  width: 6px;
+}
+
 
 
 
