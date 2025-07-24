@@ -99,133 +99,20 @@
 
 
 
-
-
-
-  /* hot pick 슬라이드 */
-/*   .slideCont.hot {
-    width: 78.88vw !important;
-  }
-  .slideCont.hot .card-column {
-    row-gap: 16px;
-    display: flex;
-    flex-direction: column;
-  }
-  .slideCont.hot .card-column .thumb-area {
-    border-radius: 12px;
-  }
-  .slideCont.hot .card-column .info-area {
-    margin-top: 2px;
-  }
-  .slideCont.hot .card .info-area .artist {
-    margin-top: 0;
-  }
-  .swiper-overflow {
-    margin-left: 20px;
-    overflow: hidden;
-  }
-  .slideCont.hot .swiper .swiper-slide-prev {
-    opacity: 1;
-    transition: none;
-  }
-  .txt-01 {
-    padding-left: 20px;
-  }
-  .slideCont.hot .card-column .info-area .tag {
-    gap: 4px;
-  }
-  .slideCont.hot .card-column .info-area .tag .value {
-    font-size: var(--font-h4-size);
-    line-height: var(--font-h4-height);
-    font-weight: var(--font-h4-weight);
-    letter-spacing: var(--font-h4-spacing);
-  } */
-  /* .titleTxt.txt-02 {
-    margin-top: 48px;
-  } */
-
-
-
-
-/* hotpick 수정중 */
-/* hot pick 슬라이드 */
-  .slideCont.hot {
-    /* width: 78.88vw !important; */
-    /* width: auto !important; */
-    /* border: 1px solid #000; */
-    width: 100% !important;
-  }
-  .slideCont.hot .swiper-wrapper {
-    /* width: 78.88vw !important; */
-    row-gap: 15px;
-  }
-
-  .slideCont.hot .swiper-wrapper .swiper-slide {
-    box-sizing: border-box;
-    height: auto;
-  }
-  .slideCont.hot .list {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .slideCont.hot .list .thumb-area {
-    border-radius: 12px;
-  }
-  .slideCont.hot .list .info-area {
-    margin-top: 2px;
-    /* min-height: 113px; */
-  }
-  .slideCont.hot .list .info-area .artist {
-    margin-top: 0;
-  }
-  .swiper-overflow {
-    margin-left: 20px;
-    overflow: hidden;
-  }
-  .slideCont.hot .swiper .swiper-slide-prev {
-    opacity: 1;
-    transition: none;
-  }
-  
-  .txt-01 {
-    padding-left: 20px;
-  }
-  .slideCont.hot .list .info-area .tag {
-    gap: 4px;
-  }
-  .slideCont.hot .list .info-area .tag .value {
-    font-size: var(--font-h4-size);
-    line-height: var(--font-h4-height);
-    font-weight: var(--font-h4-weight);
-    letter-spacing: var(--font-h4-spacing);
-  }
-  /* .titleTxt.txt-02 {
-    margin-top: 48px;
-  } */
-
-
-
-
-
-/* 핫픽 슬라이드 수정중 */
-.slideCont.hot .list .info-area .title {
-  font-size: var(--font-large-size);
-  font-weight: var(--font-large-weight);
-  line-height: var(--font-large-line);
-  color: #363E4E;
+/* 핫픽슬라이드 */
+.txt-01 {
+  padding-left: 20px;
 }
-.slideCont.hot .list .info-area .artist {
-  display: block;
-  margin-top: 4px;
-  font-size: var(--font-medium-size);
-  font-weight: var(--font-medium-weight);
-  line-height: var(--font-medium-line);
-  color: #8B98A7;
+.swiper-overflow {
+  overflow: hidden;
+  margin-left: 20px;
 }
-.slideCont.hot .list .thumb-area {
-  position: relative;
+.slideCont.hot {
+  width: 100% !important;
+}
+.swiper.hot-swiper {
+  margin-right: 20px;
+  overflow: visible;
 }
 .slideCont.hot .list {
   min-width: 0;
@@ -234,13 +121,12 @@
   display: block;
 }
 .slideCont.hot .list .thumb-area {
-  border-radius: 16px;
-  overflow: hidden;
-  width: 100%;
-  border: 1px solid #EEEFEF;
-  width: 100%;
-  padding-top: 100%; /* 세로 = 가로 */
   position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #EEEFEF;
+  padding-top: 100%; 
 }
 .slideCont.hot .list .thumb-area img {
   width: 100%;
@@ -252,7 +138,7 @@
   object-fit: cover;
 }
 .slideCont.hot .list .info-area {
-  margin-top: 8px;
+  margin-top: 2px;
   min-width: 0;
 }
 .slideCont.hot .list .info-area .txtBox {
@@ -265,13 +151,30 @@
   word-break: break-word;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  font-size: var(--font-large-size);
+  font-weight: var(--font-large-weight);
+  line-height: var(--font-large-line);
+  color: #444A5A;
 }
 .slideCont.hot .list .info-area .artist {
+  display: block;
+  font-size: var(--font-medium-size);
+  font-weight: var(--font-medium-weight);
+  line-height: var(--font-medium-line);
+  color: #6E7891;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
+.slideCont.hot .list .info-area .tag {
+  gap: 4px;
+}
+.slideCont.hot .list .info-area .tag .value {
+  font-size: 18px;
+  font-weight: var(--font-semibold);
+  line-height: 1.5;
+  letter-spacing: -0.36px;
+}
 
 
 
