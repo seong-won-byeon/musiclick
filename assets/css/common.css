@@ -711,10 +711,7 @@ body.fixed {
 .slideCont .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 !important;
 }
-.slideCont .swiper .swiper-slide-prev {
-  opacity: 0;
-  transition: 0.3s;
-}
+
 /* .slideCont .swiper .swiper-slide-next {
   margin-left: 20px;
 } */
