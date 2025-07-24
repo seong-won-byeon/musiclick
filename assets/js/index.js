@@ -79,18 +79,14 @@ const swiper = new Swiper('.banner', {
 
 
 
-const HOTswiper = new Swiper(".hot-swiper", {
-  slidesPerView: 2.5, // 2열 + 오른쪽 일부 노출
+const HotSwiper = new Swiper(".hot-swiper", {
+  slidesPerView: 2.3, // 2열 + 오른쪽 일부 노출
   grid: {
     rows: 2,
     fill: 'row',
   },
-  spaceBetween: 15,
-  rewind: true,
-  speed: 800, // ✅ 전환 속도 조정 (기본 300 → 800ms)
-  touchRatio: 0.5,
+  spaceBetween: 12,
 });
-
 
 
 // 쇼츠 슬라이드(임시)
