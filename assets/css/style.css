@@ -99,7 +99,11 @@
 
 
 
-/* 핫픽슬라이드 */
+
+
+
+
+/* hot pick 슬라이드 */
 .txt-01 {
   padding-left: 20px;
 }
@@ -180,6 +184,10 @@
 
 
 
+  
+
+
+
   /* 쇼츠 슬라이드 */
   .shortsCnt .shorts-swiper {
     padding: 0 20px;
@@ -189,7 +197,6 @@
     padding-left: 20px;
   }
   .shortsCnt .swiper-slide {
-    /* width: calc((100% - 20px) / 2);  */
     width: 41.6667vw;
     box-sizing: border-box;
   }
@@ -246,6 +253,7 @@
     width: 16px;
     height: 16px;
     font-size: 10px;
+    border: 1px solid #000;
   }
 
 
@@ -266,13 +274,18 @@
     font-weight: var(--font-h3-weight);
     letter-spacing: var(--font-h3-spacing);
     line-height: var(--font-h3-height);
-    margin-top: 28px;
+    /* margin-top: 28px; */
     color: #171E28;
   }
   .titleTxt.txt-02 {
     margin-top: 48px;
+    border: 2px solid green;
   }
 
+
+  .divider {
+    margin-top: 48px;
+  }
 
 
 
@@ -919,14 +932,14 @@
 }
 .container.yt > p:nth-of-type(1) {
   color: #1A1D23;
-  margin-top: 20px;
+  margin-top: 4px;
   font-size: 24px;
   font-weight: var(--font-semibold);
   line-height: 1.4;
   letter-spacing: -0.48px;
 }
 .container.yt-step1 {
-  padding-top: 80px;
+  padding-top: 72px;
 }
 
 /* 0725 수정 */
@@ -1003,6 +1016,10 @@
   line-height: var(--font-small-line);
   color: #6E7891;
 }
+
+
+
+
 
 
 
@@ -1290,9 +1307,9 @@ header.shorts svg path {
   .titleTxt.txt-01 {
     margin-top: 32px;
   }
-  .titleTxt.txt-02 {
+  /* .titleTxt.txt-02 {
     margin-top: 56px;
-  }
+  } */
 
   .showBox {
     margin-top: 24px;
