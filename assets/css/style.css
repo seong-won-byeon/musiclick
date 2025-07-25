@@ -928,28 +928,66 @@
 .container.yt-step1 {
   padding-top: 80px;
 }
-.container.yt-step1 > p:nth-of-type(2) {
-  margin-top: 16px;
-  color: #6E7891;
-  font-size: 17px;
-  font-weight: var(--font-semibold);
-  line-height: 1.5;
-  letter-spacing: -0.36px;
-  position: relative;
+
+/* 0725 수정 */
+.container.yt-step1 {
+  height: auto;
 }
-.container.yt-step1 > p:nth-of-type(2) span {
-  display: inline-flex;
-  justify-content: center;
+.yt-step1 .info-block {
+  display: flex;
   align-items: center;
+  gap: 8px;
 }
-.container.yt-step1 > p:nth-of-type(2) span::after {
-  content: '';
-  background: url(../img/contact.jpg) no-repeat center / 100%;
-  width: 24px;
-  height: 24px;
-  margin-left: 3px;
-  margin-top: -3px;
+.yt-step1 > .info-block {
+  margin-top: 28px;
 }
+.yt-step1 .info-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.yt-step1 .info-text {
+  flex: 1;
+}
+.yt-step1 .info-title {
+  font-size: 18px;
+  font-weight: var(--font-semibold);
+  letter-spacing: -0.36px;
+  line-height: 1.5;
+  margin-bottom: 2px;
+  color: #444A5A;
+}
+.yt-step1 .info-title .highlight {
+  color: #56B6AF;
+  text-decoration: underline;
+}
+.yt-step1 .info-desc {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: var(--font-regular);
+  color: #6E7891;
+}
+.yt-step1 .divider {
+  height: 1px;
+  background-color: #d1d5dc;
+  margin: 16px 0;
+}
+.yt-step1 .info-inner {
+  display: flex;
+  flex-direction: column;
+}
+.yt-step1 .info-inner .thumb-area {
+  margin-top: 16px;
+  padding-left: 40px;
+}
+.yt-step1 .info-inner .auth {
+  border: 1px solid #d1d5dc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* 0725 수정 */
+
+
 .container.yt-step2 {
   display: flex;
   flex-direction: column;
